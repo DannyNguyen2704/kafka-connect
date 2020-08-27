@@ -1,0 +1,11 @@
+{
+    "name": "sink_mysql_connector",
+    "config": {
+        "connector.class": "io.confluent.connect.jdbc.JdbcSinkConnector",
+        "tasks.max": "2",
+        "topics": "customers",
+        "connection.url": "jdbc:mysql://docker.for.mac.localhost:3306/command_db?user=root&password=root",
+        "auto.create": "true",
+        "table.name.format":"replicated_customer"
+    }
+}
